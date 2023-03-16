@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": "match"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "endtime": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "joinfee": {
+      "type": "string",
+      "required": true
+    },
+    "quiz": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quizze.quizze"
+    }
+  }
+}
